@@ -48,16 +48,11 @@ class SearchSelenium:
                 dados = []
                 for page_num in range(num_pages):
                     if page_num > 0:
-                        print("passei1")
                         WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#scr-res-table > div.W\(100\%\).Mt\(15px\).Ta\(end\) > button.Va\(m\).H\(20px\).Bd\(0\).M\(0\).P\(0\).Fz\(s\).Pstart\(10px\).O\(n\)\:f.Fw\(500\).C\(\$linkColor\)")))
-                        print("passei2")
                         time.sleep(1)
-                        print("passei3")
                         driver.find_element(By.CSS_SELECTOR, "#scr-res-table > div.W\(100\%\).Mt\(15px\).Ta\(end\) > button.Va\(m\).H\(20px\).Bd\(0\).M\(0\).P\(0\).Fz\(s\).Pstart\(10px\).O\(n\)\:f.Fw\(500\).C\(\$linkColor\)").click()
-                        print("passei4")
                         page_num+1
 
-                    print("passei5")
                     # Aguarda o carregamento dos dados
                     WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.CSS_SELECTOR, "table.W\\(100\\%\\)")))
 
